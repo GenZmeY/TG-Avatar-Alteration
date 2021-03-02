@@ -54,9 +54,10 @@ async def main():
         index = index + 1440
     elif index >= 1440:
         index = index - 1440
+    prev_avatar = await client.get_profile_photos('me')
     filename = config.IMG_DIR + f'/{index:04}.' + config.IMG_EXT
-    await client(DeletePhotosRequest(await client.get_profile_photos('me')))
     await client(UploadProfilePhotoRequest(await client.upload_file(filename)))
+    await client(DeletePhotosRequest(prev_avatar))
     print('Avatar changed: ' + filename)
 
 

@@ -25,8 +25,8 @@ Cache="/var/cache/tg-avatar-alteration"
 
 if [[ $(whoami) == "$TgAaUser" ]]; then
 	/usr/bin/python3 "$App" "$Conf" "$Cache"
-elif [[ -n $(groups "${USER}" | grep -Fo 'wheel') ]] || [[ "${EUID}" -eq 0 ]]; then
-	sudo -u "${TgAaUser}" -s -- /usr/bin/tg-avatar-alteration
+elif [[ -n $(groups "$USER" | grep -Fo 'wheel') ]] || [[ "$EUID" -eq 0 ]]; then
+	sudo -u "$TgAaUser" -s -- /usr/bin/tg-avatar-alteration
 else
 	echo "You must be ${TgAaUser}, root or sudo-user to run this command"
 fi

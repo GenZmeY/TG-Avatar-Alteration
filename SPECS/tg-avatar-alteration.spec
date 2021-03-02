@@ -3,7 +3,7 @@
 %global user tg-aa-user
 
 Name:      tg-avatar-alteration
-Version:   1.0.0
+Version:   1.0.1
 Release:   1%{dist}
 Summary:   telegram avatar alteration
 Group:     Applications/Communications
@@ -99,5 +99,8 @@ if [[ "$1" -eq 0 ]]; then # Uninstall
 fi
 
 %changelog
+* Tue Mar 02 2021 GenZmeY <genzmey@gmail.com> - 1.0.1-1
+- Removed the gap when changing the avatar.
+
 * Mon Mar 01 2021 GenZmeY <genzmey@gmail.com> - 1.0.0-1
 - first version.
