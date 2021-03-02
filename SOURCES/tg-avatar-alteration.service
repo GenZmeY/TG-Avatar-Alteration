@@ -1,0 +1,20 @@
+[Unit]
+Description=telegram avatar alteration
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=tg-aa-user
+Group=tg-aa-user
+ExecStart=/usr/bin/python3 /usr/share/tg-avatar-alteration/main.py /etc/tg-avatar-alteration/config.py /var/cache/tg-avatar-alteration
+
+NoNewPrivileges=yes
+PrivateTmp=true
+PrivateDevices=true
+ProtectHome=read-only
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target
+

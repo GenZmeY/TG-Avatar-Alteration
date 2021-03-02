@@ -1,0 +1,10 @@
+[Unit]
+Description=telegram avatar alteration timer
+
+[Timer]
+OnCalendar=minutely
+Unit=tg-avatar-alteration.service
+
+[Install]
+WantedBy=multi-user.target
+
