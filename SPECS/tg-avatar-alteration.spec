@@ -4,7 +4,7 @@
 
 Name:      tg-avatar-alteration
 Version:   1.0.1
-Release:   1%{dist}
+Release:   2%{dist}
 Summary:   telegram avatar alteration
 Group:     Applications/Communications
 License:   GNU GPLv3
@@ -49,7 +49,7 @@ install -m 644 %{SOURCE2} %{buildroot}/%{_unitdir}
 install -m 644 %{SOURCE3} %{buildroot}/%{_unitdir}
 install -m 644 %{SOURCE4} %{buildroot}/%{_sysconfdir}/%{name}
 install -m 644 %{SOURCE5} %{buildroot}/%{_datadir}/%{name}
-install -m 644 %{SOURCE5} %{buildroot}/%{_datadir}/licenses/%{name}/*
+install -m 644 %{SOURCE6} %{buildroot}/%{_datadir}/licenses/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -99,8 +99,12 @@ if [[ "$1" -eq 0 ]]; then # Uninstall
 fi
 
 %changelog
+* Mon Mar 15 2021 GenZmeY <genzmey@gmail.com> - 1.0.1-2
+- Fixed typo when copying license file. 
+
 * Tue Mar 02 2021 GenZmeY <genzmey@gmail.com> - 1.0.1-1
 - Removed the gap when changing the avatar.
 
 * Mon Mar 01 2021 GenZmeY <genzmey@gmail.com> - 1.0.0-1
 - first version.
+
