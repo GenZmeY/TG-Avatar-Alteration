@@ -50,5 +50,8 @@ The installation package will be here:
 10. If you need the timer to work after a reboot, enable the timer:  
 `sudo systemctl enable tg-avatar-alteration.timer`
 
+# Now you can turn your avatar into something like this:
+![](example.gif)
+
 # License
 [GNU GPLv3](LICENSE)
