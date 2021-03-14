@@ -41,7 +41,7 @@ install -d %{buildroot}/%{_unitdir}
 install -d %{buildroot}/%{_datadir}/%{name}
 install -d %{buildroot}/%{_sysconfdir}/%{name}
 install -d %{buildroot}/%{_localstatedir}/cache/%{name}
-install -d %{buildroot}/%{_datadir}/licenses/%{name}/*
+install -d %{buildroot}/%{_datadir}/licenses/%{name}
 
 install -m 644 %{SOURCE0} %{buildroot}/%{_bindir}
 install -m 644 %{SOURCE1} %{buildroot}/%{_datadir}/%{name}
