@@ -47,7 +47,7 @@ The installation package will be here:
 8. Run the `tg-avatar-alteration` command to establish a session.
 9. Start a timer that will change your avatar every minute:  
 `sudo systemctl start tg-avatar-alteration.timer`
-10. If you need the timer to work after a reboot, enable the timer:  
+10. If you need the timer to work after a reboot, enable it:  
 `sudo systemctl enable tg-avatar-alteration.timer`
 
 # Now you can turn your avatar into something like this:
